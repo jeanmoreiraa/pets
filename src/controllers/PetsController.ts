@@ -9,8 +9,12 @@ export const listPets = async (req: Request, res: Response) => {
 
 export const createPet = async (req: Request, res: Response) => {};
 
-export const getPetById = async (req: Request, res: Response) => {};
+export const getPetById = async (req: Request, res: Response) => {
 
-export const updatePet = async (req: Request, res: Response) => {};
+};
+
+export const updatePet = async (req: Request, res: Response) => {
+  const petId = 
+};
 
 export const deletePet = async (req: Request, res: Response) => {};
