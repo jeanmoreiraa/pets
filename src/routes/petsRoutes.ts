@@ -1,17 +1,10 @@
-import { Router } from "express";
-import {
-  createPet,
-  deletePetById,
-  getPetById,
-  listPets,
-  updatePetById,
-} from "../controllers/PetsController";
+import {Router} from "express";
+import { createPet, deletePetById, listPets, updatePetById } from "../controllers/PetsController";
 
-const PetsRouter = Router();
-.get("/pets", listPets);
-.post("/pets", createPet);
-.delete("/pets/:petId", deletePetById);
-.put("/pets/:petId", updatePetById);
-.get("/pets/:petId(\\d+)", getPetById);
+export const petsRoutes = Router()
+.post('/pets', createPet)
+.get('/pets/:petId(\\d+)', listPets)
+.put('/pets/:petId(\\d+)', updatePetById)
+.delete('/pets/:petId(\\d+)', deletePetById)
 
-export default PetsRouter;
+

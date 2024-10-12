@@ -1,13 +1,9 @@
 import express from "express";
-import PetsRouter from "./routes/petsRoutes";
+import { petsRoutes } from "./routes/petsRoutes";
 
 const app = express();
 const port = 3000;
+app.use(petsRoutes) 
 
-app.use(PetsRouter);
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
 
 app.listen(port, () => console.log(`Listening at http://localhost:${port}`));
